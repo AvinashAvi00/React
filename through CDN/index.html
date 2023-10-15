@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Hello!</h1>
+    <div id="root">
+    </div>
+
+    <button id="btn"> <span> Submit </span></button>
+
+    
+     <!-- react CDN -->
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+
+     <!-- js -->
+    <script>
+        const Btn = () => React.creatElement("button", {id: 'btn'}, React.creatElement("span", {}, "Submit"))
+
+        const rootContainer = document.getElementById("root");
+        const root = ReactDOM.creatRoot(rootContainer);
+        root.render(Btn());
+
+
+          // react element
+        /*
+        *   {
+            type: 'button',
+            props: {
+                children: 'Submit',
+                classNmae: 'btn btn-primary'
+            }
+        }
+        *
+        */
+    </script>
+</body>
+</html>
